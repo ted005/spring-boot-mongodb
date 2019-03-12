@@ -1,6 +1,5 @@
-# spring-boot-mongodb
-This repository contains a Spring Boot example project for MongoDB.
-
-For a code review of this repo, see my related [blog post](https://springframework.guru/3402-2/).
-
-You can learn more about my courses [here](http://courses.springframework.guru/courses/) on my site.
+# spring-boot-mongodb-demo
+- 使用Dockerfile构建并推送docker image
+- 使用`docker-compose`启动:
+1. `spring-boot-mongodb-demo` **docker**容器
+2. `mongodb` **docker**容器

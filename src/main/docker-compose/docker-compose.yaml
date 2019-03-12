@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+
+  #第一个docker
+  mongodb:
+    image: mongo:latest
+    #本地目录映射docker数据目录，做数据持久化 -v
+    volumes:
+      - /Users/hope/my_mongo_docker2:/data/db
+    ports:
+      - "27017:27017"
+    restart: always
+
+  #第二个docker
+  boot-demo:
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+    image: ted005/spring-boot-mongo-demo:latest
+    # -p 本机端口映射到docker的80端口
+    ports:
+      - "8080:8080"
+    restart: always
